@@ -25,7 +25,10 @@ jQuery(document).ready(function(){
 
 	// CENTER ELEMENTS
 	$('.hc-content').each(function() {
-		$(this).css({ 'top': '50%', 'margin-top': -($(this).height() / 2) });
+		if ($(this).attr('data-margin')) {
+		 	$(this).css({ 'top': '50%', 'margin-top': -($(this).height() / 2) - $(this).data('margin') });
+		}
+		else $(this).css({ 'top': '50%', 'margin-top': -($(this).height() / 2) });
 	});
 
 	// JUMP TO SECTIONS
