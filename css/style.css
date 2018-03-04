@@ -44,6 +44,7 @@ html, body {
 .container {
 	padding: 0;
 }
+
 /* VIDEO BG */
 #video-bg {
 	margin: 0;
@@ -52,6 +53,7 @@ html, body {
 	min-height: 100vh;
 	width: 100%;
 	position: relative;
+	text-shadow: 1px 1px 2px black;
 }
 #video-bg video {
 	height: 100%;
@@ -83,6 +85,7 @@ html, body {
 #video-bg .visit-title .main-title {
 	font-size: 60px;
 	line-height: 1;
+	text-shadow: 1px 1px 3px black;
 }
 #video-bg .visit-title .main-pick {
 	text-transform: uppercase;
@@ -135,11 +138,36 @@ html, body {
 	margin-top: -120px;
 	padding-top: 0;
 }
+#places-showcase .places-read-more {
+	display: block;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 40px 20px 10px 20px;
+	background: transparent;
+	background: -moz-linear-gradient(top, transparent 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, transparent 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 100%);
+}
+#places-showcase .places-read-more p {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 1; 
+	font-size: 13px;
+}
 #places-showcase .places-image {
 	padding: 0;
 	margin: 0;
 	max-width: 400px;
 	overflow: hidden;
+}
+#places-showcase .places-image p {
+	text-shadow: 1px 1px 1px black;
 }
 #places-showcase img {
 	width: 100%;
@@ -181,7 +209,9 @@ html, body {
 	background-color: white;
 	margin-top: 20px;
 }
-
+#single-place {
+	position: relative;
+}
 #single-place .single-place-image {
 	padding: 0;
 	text-align: center;
@@ -192,8 +222,14 @@ html, body {
 	/*max-width: 400px;*/
 }
 
+#single-place {
+	display: flex;
+	align-items: center;
+}
 #single-place .single-place-content {
-	padding: 80px 50px 0 0;
+	padding: 0 50px 0 0;
+	position: relative;
+	height: 100%;
 }
 #single-place .single-place-location {
 	text-transform: uppercase;
@@ -273,7 +309,7 @@ html, body {
 	line-height: 1;
 	border: none;
 	font-size: 14px;
-	transition: 0.5s;
+	transition: 0.3s;
 	outline: none;
 }
 #places-nav .places-nav-names .active, #places-nav .places-name:hover {
@@ -309,13 +345,13 @@ html, body {
 	text-align: right;
 	text-transform: uppercase;
 	line-height: 1;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 }
 #from-others .others-slogan {
 	text-align: right;
 	line-height: 1;
-	font-size: 22px;
+	font-size: 26px;
 	font-weight: 300;
 }
 #from-others .insta-container {
@@ -389,6 +425,9 @@ html, body {
 	#video-bg .visit-title .main-title {
 		font-size: 44px;
 	}
+	#single-place .single-place-content {
+		padding: 50px 50px 50px 0;
+	}
 }
 @media (max-width: 767px) {
 	#video-bg .content {
@@ -398,9 +437,14 @@ html, body {
 		font-size: 34px;
 	}
 	#single-place .single-place-content {
-		padding: 0 50px 50px 50px;
+		padding: 50px;
+		padding-top: 0;
 	}
 	#from-others {
 		padding: 25px;
 	}
+	#single-place {
+		display: block;
+	}
+
 }
