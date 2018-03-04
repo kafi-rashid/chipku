@@ -57,6 +57,11 @@ jQuery(document).ready(function(){
 		return false;
 	});
 
+	// RESIZING ELEMENTS
+	$(window).on("load resize", function(e){
+		$('#from-others iframe').height($('#from-others iframe').width() / 5);
+	});
+
 });
 
 // GOOGLE MAPS
