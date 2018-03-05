@@ -62,6 +62,11 @@ jQuery(document).ready(function(){
 		$('#from-others iframe').height($('#from-others iframe').width() / 5);
 	});
 
+	// NAVTAB
+	$('.places-name').click(function() {
+		$('.places-name').removeClass('active');
+		$(this).addClass('active');
+	});
 });
 
 // GOOGLE MAPS
